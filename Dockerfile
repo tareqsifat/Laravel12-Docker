@@ -1,7 +1,8 @@
 FROM php:8.2-fpm
 
 RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y software-properties-common git zip unzip && \
+    apt-get install -y software-properties-common && \
+    docker-php-ext-install pdo_mysql && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Composer

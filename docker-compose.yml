@@ -25,9 +25,10 @@ services:
       MYSQL_PASSWORD: mysqlpassword
     networks:
       - app-network
+
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
-    container_name: phpmyadmin-wafilife
+    container_name: phpmyadmin-laravel
     restart: always
     ports:
       - "8085:80"
